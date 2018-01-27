@@ -1,3 +1,5 @@
+package magPie;
+
 import java.util.Scanner;
 
 /**
@@ -27,3 +29,4 @@ public class MagpieRunner3
 	}
 
 }
+

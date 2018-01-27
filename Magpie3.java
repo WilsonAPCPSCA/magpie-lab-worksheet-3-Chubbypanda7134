@@ -1,3 +1,5 @@
+package magPie;
+
 /**
  * A program to carry on conversations with a human user.
  * This version: 
@@ -30,13 +32,29 @@ public class Magpie3
 	public String getResponse(String statement)
 	{
 		String response = "";
-		if (statement.length() == 0)
-		{
-			response = "Say something, please.";
+		if(statement.trim().length() == 0) {
+			response = "Type something in, bakka";
 		}
 		else if (findKeyword(statement, "no") >= 0)
 		{
 			response = "Why so negative?";
+		}
+		else if (findKeyword(statement, "cat") >= 0
+				|| findKeyword(statement, "dog") >= 0) {
+			response = "tell me more about your pets";
+		}
+		else if (findKeyword(statement, "Mrs. Bushyeager") >= 0
+				|| findKeyword(statement, "Mr. Liu") >= 0) {
+			response = "Sounds like a good person";
+		}
+		else if(findKeyword(statement, "Religon") >= 0) {
+			response = "Jesus";
+		}
+		else if(findKeyword(statement, "God") >= 0) {
+			response = "Satan";
+		}
+		else if(findKeyword(statement, "Jeffrey") >= 0) {
+			response = "Liu";
 		}
 		else if (findKeyword(statement, "mother") >= 0
 				|| findKeyword(statement, "father") >= 0
@@ -168,3 +186,4 @@ public class Magpie3
 	}
 
 }
+
